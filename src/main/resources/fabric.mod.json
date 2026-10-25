@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "tameablespider",
+	"version": "${version}",
+	"name": "TameableSpider",
+	"description": "Makes spiders tameable via rotten flesh or spider eye's... so they don't attack you ...",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/tameablespider/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "de.platin42.tameablespider.TameableSpiderMod"
+		],
+		"client": [
+			"de.platin42.tameablespider.client.TameableSpiderClient"
+		]
+	},
+	"mixins": [
+		"tameablespider.mixins.json",
+		{
+			"config": "tameablespider.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
